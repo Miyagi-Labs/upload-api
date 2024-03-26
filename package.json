@@ -2,11 +2,13 @@
   "name": "upload-multiple-images-mongodb",
   "version": "1.0.0",
   "description": "Node.js upload multiple files/images to MongoDB Demo",
-  "main": "src/server.js",
+  "main": "src/index.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
+    "start": "node src/index.js",
+    "build": "rm -rf dist && ./node_modules/.bin/babel . --out-dir dist --ignore node_modules --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -20,6 +22,11 @@
   "author": "bezkoder",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.24.1",
+    "@babel/core": "^7.24.3",
+    "@babel/node": "^7.23.9",
+    "@babel/preset-env": "^7.24.3",
+    "@babel/register": "^7.23.7",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongodb": "^4.1.3",
