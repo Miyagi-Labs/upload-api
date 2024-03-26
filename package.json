@@ -4,7 +4,7 @@
   "description": "Node.js upload multiple files/images to MongoDB Demo",
   "main": "src/index.js",
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   },
   "scripts": {
     "start": "node src/index.js",
