@@ -3,6 +3,8 @@ const multer = require("multer");
 const { GridFsStorage } = require("multer-gridfs-storage");
 const dbConfig = require("../config/db");
 
+
+
 var storage = new GridFsStorage({
   url: dbConfig.url + dbConfig.database,
   options: { useNewUrlParser: true, useUnifiedTopology: true },
@@ -10,13 +12,13 @@ var storage = new GridFsStorage({
     const match = ["image/png", "image/jpeg"];
 
     if (match.indexOf(file.mimetype) === -1) {
-      const filename = `${file.originalname}`;
+      const filename = `${Date.now()}-bezkoder-${file.originalname}`;
       return filename;
     }
 
     return {
       bucketName: dbConfig.imgBucket,
-      filename: `${file.originalname}`
+      filename: `${Date.now()}-bezkoder-${file.originalname}`
     };
   }
 });
