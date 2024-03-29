@@ -4,7 +4,7 @@ const app = express();
 const initRoutes = require("./src/routes");
 
 var corsOptions = {
-  origin: "https://upload-api-backend.vercel.app/"
+  origin: "http://localhost:8080"
 };
 
 app.use(cors(corsOptions));
