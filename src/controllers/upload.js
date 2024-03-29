@@ -7,7 +7,7 @@ const GridFSBucket = mongodb.GridFSBucket;
 
 const url = dbConfig.url;
 
-const baseUrl = "https://upload-api-backend.vercel.app/files/";
+const baseUrl = "https://upload-api-backend.vercel.app";
 
 const mongoClient = new MongoClient(url);
 
