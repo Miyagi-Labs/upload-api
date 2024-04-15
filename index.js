@@ -3,11 +3,11 @@ const express = require("express");
 const app = express();
 const initRoutes = require("./src/routes");
 
-var corsOptions = {
-  origin: "https://upload-api-backend.vercel.app"
-};
+// var corsOptions = {
+//   origin: "https://upload-api-backend.vercel.app"
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 initRoutes(app);
 
